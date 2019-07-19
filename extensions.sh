@@ -1,0 +1,6 @@
+jupyter labextension install @ryantam626/jupyterlab_code_formatter
+jupyter serverextension enable --py jupyterlab_code_formatter
+
+jupyter labextension install @krassowski/jupyterlab_go_to_definition
+
+jupyter labextension install @ijmbarr/jupyterlab_spellchecker
