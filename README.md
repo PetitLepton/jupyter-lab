@@ -1,12 +1,12 @@
-The following allows to set up a conda environment with Jupyter Lab, including extensions, and add independent Python kernels. Thanks to this setup, one can separate the IDE (Jupyter Lab) from the environment packages (like pandas, plotly, and so on). It also makes possible to test different environment, therefore different versions of the same packages.
+The following allows to set up a `conda` environment with Jupyter Lab, including extensions, and add independent Python kernels. Thanks to this setup, one can separate the IDE (Jupyter Lab) from the environment packages (like pandas, plotly, and so on). It also makes possible to test different environments, therefore different versions of the same packages.
 
 ## Install the Jupyter Lab environment
 
-The conda environment specification is stored in `jupyter-lab.yml`. Beyond, Jupyter Lab, the environment contains the `black` formatter (including the extension to use it on Jupyter Lab) and the extension for `plotly` charts rendering.
+The `conda` environment specification is stored in `jupyter-lab.yml`.
 
 ## Install the extensions
 
-The executable `extensions.sh` install some extensions into Jupyter Lab: [code formatter](https://github.com/ryantam626/jupyterlab_code_formatter), [go to definition](https://github.com/krassowski/jupyterlab-go-to-definition) and [spell checker](https://github.com/ijmbarr/jupyterlab_spellchecker). This can obviously be extended.
+The executable `extensions.sh` install some extensions into Jupyter Lab: [plot.ly for charts rendering](https://plot.ly/python/getting-started/), [code formatter](https://github.com/ryantam626/jupyterlab_code_formatter), [go to definition](https://github.com/krassowski/jupyterlab-go-to-definition) and [spell checker](https://github.com/ijmbarr/jupyterlab_spellchecker). This can obviously be extended.
 
 If you want to use the `Black` formatter with a keyboard shortcut, you can [add](https://github.com/ryantam626/jupyterlab_code_formatter) to the Jupyter Lab Settings
 ```
