@@ -4,11 +4,11 @@ source $CONDA_BASE/etc/profile.d/conda.sh
 conda activate jupyter-lab
 
 # Node JS for the extensions
-conda install -c conda_forge nodejs
+conda install -c conda-forge nodejs
 export NODE_OPTIONS=--max-old-space-size=4096
 
 # Jupyter Lab code formatter with black
-conda install -c conda_forge black jupyterlab_code_formatter
+conda install -c conda-forge black jupyterlab_code_formatter
 jupyter labextension install @ryantam626/jupyterlab_code_formatter
 jupyter serverextension enable --py jupyterlab_code_formatter
 
