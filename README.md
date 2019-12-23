@@ -6,18 +6,30 @@ The `conda` environment specification is stored in `jupyter-lab.yml`.
 
 ## Install the extensions
 
-The executable `extensions.sh` install some extensions into Jupyter Lab: [plot.ly for charts rendering](https://plot.ly/python/getting-started/), [code formatter](https://github.com/ryantam626/jupyterlab_code_formatter), [go to definition](https://github.com/krassowski/jupyterlab-go-to-definition) and [spell checker](https://github.com/ijmbarr/jupyterlab_spellchecker). This can obviously be extended.
+The executable `extensions.sh` (in coordination with `jupyter-lab.yml`) installs some extensions into Jupyter Lab: [git support](https://github.com/jupyterlab/jupyterlab-git), [table of contents](https://github.com/jupyterlab/jupyterlab-toc), [code formatter](https://github.com/ryantam626/jupyterlab_code_formatter), [go to definition](https://github.com/krassowski/jupyterlab-go-to-definition), [spell checker](https://github.com/ijmbarr/jupyterlab_spellchecker) and [plot.ly for charts rendering](https://plot.ly/python/getting-started/). This can obviously be extended.
 
-If you want to use the `Black` formatter with a keyboard shortcut, you can [add](https://github.com/ryantam626/jupyterlab_code_formatter) to the Jupyter Lab Settings
+If you want to use the `Black` formatter with a keyboard shortcut, as well as the Quick Open extension, you can add to the Jupyter Lab Settings — Settings → Advanced Settings Editor → Keyboard Shortcuts —, the [formatter](https://github.com/ryantam626/jupyterlab_code_formatter) and [quick open](https://github.com/parente/jupyterlab-quickopen) shortcuts.
 ```
-{"jupyterlab_code_formatter:black":{
-    "command": "jupyterlab_code_formatter:black",
-    "keys": [
-        "Ctrl K",
-        "Ctrl M"
-    ],
-    "selector": ".jp-Notebook.jp-mod-editMode"
-}}
+"shortcuts": [
+    {
+        "command": "jupyterlab_code_formatter:black",
+        "keys": [
+            "Ctrl K",
+            "Ctrl L"
+        ],
+        "selector": ".jp-Notebook.jp-mod-editMode"
+    },
+    {
+        "command": "quickopen:activate",
+        # Accel is Ctrl on Linux
+        "keys": [
+            "Accel P"
+        ],
+        "selector": "body",
+        "title": "Activate Quick Open",
+        "category": "Main Area"
+    }
+]
 ```
 
 ## Add the Python kernels

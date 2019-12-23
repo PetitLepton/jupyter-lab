@@ -3,5 +3,13 @@ channels:
     - conda-forge
     - defaults
 dependencies:
-    - python=3.7.3
-    - jupyterlab=1.0.2
+    - python=3.7.5
+    - pip=19.3.1
+    - jupyterlab=1.2.4
+    - jupyterlab-git
+    - nbcommands
+    - black
+    - jupyterlab_code_formatter
+    - nodejs
+    - pip:
+        - jupyterlab-quickopen

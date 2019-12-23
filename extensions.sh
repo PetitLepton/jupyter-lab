@@ -3,27 +3,20 @@ CONDA_BASE=$(conda info --base)
 source $CONDA_BASE/etc/profile.d/conda.sh
 conda activate jupyter-lab
 
-# Node JS for the extensions
-conda install -c conda-forge nodejs
 export NODE_OPTIONS=--max-old-space-size=4096
 
-# Jupyter Lab code formatter with black
-conda install -c conda-forge black jupyterlab_code_formatter
-jupyter labextension install @ryantam626/jupyterlab_code_formatter
+jupyter labextension install @jupyterlab/git --no-build --debug
+jupyter labextension install @jupyterlab/toc --no-build --debug
+jupyter labextension install @ryantam626/jupyterlab_code_formatter --no-build --debug
 jupyter serverextension enable --py jupyterlab_code_formatter
+jupyter labextension install @krassowski/jupyterlab_go_to_definition --no-build --debug
+jupyter labextension install @ijmbarr/jupyterlab_spellchecker --no-build --debug
+jupyter labextension install @parente/jupyterlab-quickopen --no-build --debug
 
-# Jupyter widgets extension, FigureWidget and renderer support
-jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 --no-build
-jupyter labextension install jupyterlab-plotly@1.0.0 --no-build
-jupyter labextension install plotlywidget@1.0.0 --no-build
+jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.0 --no-build --debug
+jupyter labextension install jupyterlab-plotly@1.2.0 --no-build --debug
+jupyter labextension install plotlywidget@1.2.0 --no-build --debug
 
-# Go To Definition extension
-jupyter labextension install @krassowski/jupyterlab_go_to_definition --no-build
-
-# Spell checker extension
-jupyter labextension install @ijmbarr/jupyterlab_spellchecker --no-build
-
-# Build extensions
-jupyter lab build
+jupyter lab build --minimize=False
 
 unset NODE_OPTIONS
